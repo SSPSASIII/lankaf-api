@@ -16,12 +16,26 @@ import numpy as np
 import pandas as pd
 import json
 import os
+import sys
 import logging
 from datetime import datetime
 
-# Configure logging
-logging.basicConfig(level=logging.INFO)
+# Configure enhanced logging for Railway deployment
+logging.basicConfig(
+   level=logging.INFO,
+   format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+   handlers=[
+       logging.StreamHandler(sys.stdout),
+       logging.StreamHandler(sys.stderr)
+   ]
+)
 logger = logging.getLogger(__name__)
+
+# Log startup information
+logger.info("🚀 LankaForecaster API Starting...")
+logger.info(f"Python version: {sys.version}")
+logger.info(f"Current working directory: {os.getcwd()}")
+logger.info(f"Environment: {os.environ.get('RAILWAY_ENVIRONMENT', 'local')}")
 
 class LankaForecasterAPI:
     """Professional API class for LankaForecaster predictions"""
