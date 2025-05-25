@@ -1,0 +1,19 @@
+{
+  "model_type": "LinearRegression",
+  "revenue_accuracy": 0.999,
+  "profit_accuracy": 0.982,
+  "overall_accuracy": 0.99,
+  "feature_columns": [
+    "gdp_growth",
+    "inflation_rate",
+    "interest_rate",
+    "exchange_rate",
+    "export_volume",
+    "import_volume",
+    "tourism_arrivals",
+    "remittances",
+    "fdi_inflow",
+    "government_spending"
+  ],
+  "trained_date": "2025-05-25T17:19:25.661147"
+}
